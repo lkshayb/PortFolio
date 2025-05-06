@@ -51,7 +51,7 @@ function Uelement(props){
     )
 }
 
-export default function HeroSection(){
+export default function HeroSection({proRef,ContRef}){
     return(
     
         <div className="h-[90vh] py-40 flex justify-between items-center bg-gradient-to-b from-white to-[#f5f5ff]">
@@ -60,18 +60,18 @@ export default function HeroSection(){
                     <span className="text-lg font-mono text-violet-500 font-bold">Hello I'm</span>
                 </div>
                 <div className="my-4">
-                    <span className="text-6xl font-sans font-bold">aaa</span>
+                    <span className="text-6xl font-sans font-bold">Lakshay Bhatia</span>
                 </div>
                 <div className="w-160">
                     <span className="text-xl text-gray-500">A tech enthusiast and web developer specializing in building responsive, user-friendly applications with modern technologies.</span>
                 </div>
-                <button className="bg-violet-500 text-white py-3 rounded my-8 px-6 hover:bg-violet-400 duration-200 ease-in">
+                <button onClick={() => proRef.current?.scrollIntoView({ behavior: 'smooth' })}  className="bg-violet-500 text-white py-3 rounded my-8 px-6 hover:bg-violet-400 duration-200 ease-in">
                     <div className="flex items-center text-sm font-semibold">
                         <div>View My Work</div>
                         <div><img src="./arrow-down.png" alt="" className="h-5 pl-2" /></div>
                     </div>
                 </button>
-                <button className="border-violet-500 border-2 py-2 rounded my-8 mx-8 px-6 duration-200 ease-in text-violet-500 hover:bg-gray-300 hover:text-black">
+                <button onClick={() => ContRef.current?.scrollIntoView({ behavior: 'smooth' })} className="border-violet-500 border-2 py-2 rounded my-8 mx-8 px-6 duration-200 ease-in text-violet-500 hover:bg-gray-300 hover:text-black">
                     Contact
                 </button>
             </div>

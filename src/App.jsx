@@ -14,10 +14,15 @@ export default function App() {
   const proRef = useRef();
   const SkillRef = useRef();    
   const ContRef = useRef();
+  const HeroRef = useRef();
   return (
     <div>
-      <Navbar aboutRef={aboutRef} proRef={proRef} SkillRef={SkillRef} ContRe={ContRef}/>
-      <HeroSection/>
+      <Navbar aboutRef={aboutRef} proRef={proRef} SkillRef={SkillRef} ContRef={ContRef} HeroRef={HeroRef}/>
+
+      <div ref={HeroRef}>
+        <HeroSection proRef={proRef} ContRef={ContRef}/>
+      </div>
+      
       <div ref={aboutRef}>
         <About/>
       </div>

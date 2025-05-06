@@ -1,34 +1,34 @@
 
 
-export default function Navbar({aboutRef,proRef,SkillRef,ContRef}){
-    
+export default function Navbar({aboutRef,proRef,SkillRef,ContRef,HeroRef}){
+ 
     return(
-        <div className="sticky top-0 md:px-20 px-5 py-4 flex justify-between items-center shadow">
-            <div className="text-3xl font-bold font-sans text-violet-500 cursor-pointer" >
-                <span>aaa</span><span className="text-blue-400">.</span>
+        <div className="sticky top-0 md:px-20 px-5 py-4 flex justify-between items-center shadow backdrop-filter backdrop-blur-sm bg-opacity-60 z-50">
+            <div className="text-3xl font-bold font-sans text-violet-500 cursor-pointer"  >
+                <span onClick={() => HeroRef.current?.scrollIntoView({behavior : 'smooth'})}>Lakshay</span><span className="text-blue-400">.</span>
             </div>
             <div className="hidden md:flex">
 
                 <button onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth' })} 
-                className="px-4 text-xl font-semibold hover:text-violet-500 duration-300 ease-in cursor-pointer">
+                className="px-4 text-xl font-semibold hover:text-violet-500 duration-200 ease-in cursor-pointer">
                     About
                 </button>
 
                 <button 
                 onClick={() => proRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-4 text-xl font-semibold hover:text-violet-500 duration-300 ease-in cursor-pointer">
+                className="px-4 text-xl font-semibold hover:text-violet-500 duration-200 ease-in cursor-pointer">
                     Projects
                 </button>
 
                 <button 
                 onClick={() => SkillRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-4 text-xl font-semibold hover:text-violet-500 duration-300 ease-in cursor-pointer">
+                className="px-4 text-xl font-semibold hover:text-violet-500 duration-200 ease-in cursor-pointer">
                     Skills
                 </button>
 
                 <button 
                 onClick={() => ContRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-4 text-xl font-semibold hover:text-violet-500 duration-300 ease-in cursor-pointer">
+                className="px-4 text-xl font-semibold hover:text-violet-500 duration-200 ease-in cursor-pointer">
                     Contact
                 </button>
             </div>
