@@ -1,23 +1,30 @@
-export default function Contact(){
+import { div } from "three/tsl"
+
+export default function Contact({HeroRef}){
+    
+    
     return(
-        <div className="h-[110vh] bg-violet-100 mb-20">
-        <div className="text-white mb-20">.</div>
-        <div className="flex items-center justify-center ">
-            <div className="text-center max-w-2xl">
-                <div className="mb-5">
-                    <span className="text-4xl font-sans font-bold">Get In Touch</span>    
+        <div className="bg-gradient-to-t pl-10 pr-10 pt-10 from-[#010440] to-black h-50">
+            <div className=" flex justify-between items-center">
+                <div>
+                    <div className="text-3xl font-bold font-sans text-white w-auto mb-2"  >
+                        <span onClick={() => HeroRef.current?.scrollIntoView({behavior : 'smooth'})}>Lakshay</span><span className="text-blue-400">.</span>
+                    </div>
+                    <div className="text-lg text-gray-400">
+                        Building the web, one project at a time.
+                    </div>
                 </div>
-                <div className="flex justify-center mb-11">
-                    <hr className="w-24 h-1 bg-violet-400 border-0" />
+                <div className="text-white mr-10">
+                    <a href="https://github.com/lkshayb" target="_blank">Github</a>
+                    <a className="pl-10" href="https://www.linkedin.com/in/lakshay-bhatia-22340a246" target="_blank">LinkedIn</a>
+                    <a className="pl-10" href="mailto:08lakshay@gmail.com" target="_blank">Mail</a>
                 </div>
-                <p className="text-lg font-gray-600">Feel free to reach out for collaborations or just a friendly chat.</p>
+                
             </div>
-            
-        </div> 
-        <div className="flex gap-5 justify-center mt-10">
-            
+            <div className="flex justify-center mb-7 mt-5">
+                <hr className="w-[100%] h-[0.5px] bg-gray-600 border-0" />
+            </div>
         </div>
-        
-    </div>
+            
     )
 }

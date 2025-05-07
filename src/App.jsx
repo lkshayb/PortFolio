@@ -33,7 +33,7 @@ export default function App() {
         <Skills/> 
       </div>
       <div ref={ContRef}>
-        <Contact/>
+        <Contact HeroRef={HeroRef}/>
       </div>
     </div>
   )
