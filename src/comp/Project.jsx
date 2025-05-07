@@ -19,7 +19,9 @@ export default function Project(){
                     {props.tech2 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech2}</span>) : null}
                     {props.tech3 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech3}</span>) : null}
                     {props.tech4 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech4}</span>) : null}
-                    
+                </div>
+                <div>
+                    <button></button>
                 </div>
             </div>
         )

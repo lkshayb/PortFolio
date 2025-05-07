@@ -22,8 +22,9 @@ function Uelement(props){
             <Float speed={1.5} rotationIntensity={1} floatIntensity={1.5}>
                 <mesh ref={coreRef}>
                     <icosahedronGeometry args={[1, 1]} />
-                    <meshStandardMaterial color="#a903fc" emissive="#a903fc" emissiveIntensity={0.6} />
+                    <meshStandardMaterial color="#a903fc" emissive="#a903fc" emissiveIntensity={1} />
                     <Edges threshold={15} color="white"/>
+                    
                 </mesh>
             </Float>
 
