@@ -14,7 +14,7 @@ export default function Contact({HeroRef}){
                         Building the web, one project at a time.
                     </div>
                 </div>
-                <div className="text-white mr-10">
+                <div className="text-gray-300 mr-10">
                     <a href="https://github.com/lkshayb" target="_blank">Github</a>
                     <a className="pl-10" href="https://www.linkedin.com/in/lakshay-bhatia-22340a246" target="_blank">LinkedIn</a>
                     <a className="pl-10" href="mailto:08lakshay@gmail.com" target="_blank">Mail</a>

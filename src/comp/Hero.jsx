@@ -56,27 +56,24 @@ export default function HeroSection({proRef,ContRef}){
     return(
     
         <div className="h-[90vh] py-40 flex justify-between items-center bg-gradient-to-b from-white to-[#f5f5ff]">
-            <div className="ml-20">
+            <div className="md:ml-20 ml-5">
                 <div>
-                    <span className="text-lg font-mono text-violet-500 font-bold">Hello I'm</span>
+                    <span className="lg:text-lg text-md font-mono text-violet-500 font-bold">Hello I'm</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-6xl font-sans font-bold">Lakshay Bhatia</span>
+                <div className="lg:my-4 my-2">
+                    <span className="lg:text-6xl text-4xl font-sans font-bold">Lakshay Bhatia</span>
                 </div>
-                <div className="w-160">
-                    <span className="text-xl text-gray-500">A tech enthusiast and web developer specializing in building responsive, user-friendly applications with modern technologies.</span>
+                <div className="lg:w-auto w-[300px]">
+                    <span className="lg:text-xl text-md text-gray-500">A tech enthusiast and web developer specializing in building responsive, user-friendly applications with modern technologies.</span>
                 </div>
-                <button onClick={() => proRef.current?.scrollIntoView({ behavior: 'smooth' })}  className="bg-violet-500 text-white py-3 rounded my-8 px-6 hover:bg-violet-400 duration-200 ease-in">
+                <button onClick={() => proRef.current?.scrollIntoView({ behavior: 'smooth' })}  className="bg-violet-500 text-white py-3 rounded px-3 my-8 lg:px-6 hover:bg-violet-400 duration-200 ease-in">
                     <div className="flex items-center text-sm font-semibold">
                         <div>View My Work</div>
                         <div><img src="./arrow-down.png" alt="" className="h-5 pl-2" /></div>
                     </div>
                 </button>
-                <button onClick={() => ContRef.current?.scrollIntoView({ behavior: 'smooth' })} className="border-violet-500 border-2 py-2 rounded my-8 mx-8 px-6 duration-200 ease-in text-violet-500 hover:bg-gray-300 hover:text-black">
-                    Contact
-                </button>
             </div>
-            <div className='mr-5 h-full w-full md:flex hidden'>
+            <div className='mr-3 h-full lg:w-full w-[400px] md:flex hidden'>
                 <Canvas camera={{ position: [0,0, 6], fov: 45 }}>
                     <ambientLight intensity={0.4} />
                     <pointLight position={[10, 10, 10]} />
