@@ -14,7 +14,7 @@ export default function Project(){
                 <div className="text-[15px] pl-8 pr-2 pt-1">
                     <span>{props.Desc_2}</span>
                 </div>
-                <div className=" text-violet-400 text-[12px] mt-4 ml-7">
+                <div className=" text-violet-400 text-[10px] md:text-[12px] mt-4 ml-7">
                     {props.tech1 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2  ">{props.tech1}</span>) : null}
                     {props.tech2 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech2}</span>) : null}
                     {props.tech3 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech3}</span>) : null}
