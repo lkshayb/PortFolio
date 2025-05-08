@@ -3,8 +3,8 @@ import { div } from "three/tsl"
 export default function Project(){
     function ProdCard(props){
         return(
-            <div className="bg-white pb-10 rounded-xl w-100 shadow-md hover:shadow-xl duration-200 ease-in">
-                <img src={props.image} className="rounded-t-xl hover:scale-102 duration-200 ease-in hover:rounded-xl" alt="" />
+            <div className="bg-white pb-10 rounded-xl lg:mb-0 mb-10 w-75 sm:w-100 mx-1 shadow-md hover:shadow-xl duration-200 ease-in">
+                <img src={props.image} className="rounded-t-xl hover:scale-102  duration-200 ease-in hover:rounded-xl" alt="" />
                 <div className="font-[600] text-xl pl-8 pt-4">
                     <span className="">{props.ProjectName}</span>
                 </div>
@@ -27,7 +27,7 @@ export default function Project(){
         )
     }
     return(
-        <div className="h-[110vh] bg-violet-100 mb-20">
+        <div className="h-auto  bg-violet-100 pb-20">
             <div className="text-white mb-20">.</div>
             <div className="flex items-center justify-center ">
                 <div className="text-center max-w-2xl">
@@ -41,7 +41,8 @@ export default function Project(){
                 </div>
                 
             </div> 
-            <div className="flex gap-5 justify-center mt-10">
+            <div className="lg:flex ml-auto mr-auto  gap-5 justify-center mt-10 lg:max-w-none max-w-fit">
+                
                 <ProdCard 
                 ProjectName="SlangSter" 
                 image="./slangster.png" 
@@ -50,7 +51,7 @@ export default function Project(){
                 tech1="React"
                 tech2="TypeScript"
                 tech3="Tailwind CSS"
-                tech4="Google Gemini AI"
+                
                 />
                 <ProdCard 
                 ProjectName="IPScout" 
