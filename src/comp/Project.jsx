@@ -20,8 +20,24 @@ export default function Project(){
                     {props.tech3 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech3}</span>) : null}
                     {props.tech4 ? (<span className="bg-violet-100 py-0.5 px-2 rounded-xl mr-2">{props.tech4}</span>) : null}
                 </div>
-                <div>
-                    <button></button>
+                <div className="sm:flex justify-start mt-10 ">
+                    <a href={props.live} target="_blank" className={`${props.live ? "flex" : "hidden"}`} >
+                        <button  className="p-2 py-1 rounded-xl border  ml-10  cursor-pointer text-cyan-500 hover:bg-gray-200 hover:text-cyan-700 duration-200 ease-in shadow-sm shadow-cyan-700 hover:shadow-cyan-500">
+                            <div className="flex gap-2 items-center">
+                                <div><img  className="h-4 filter invert-0 sepia brightness-200 hue-rotate-150" src="./ext.png" alt="" /></div>
+                                <div className="text-[20px]">Live Demo</div>
+                            </div>
+                        </button>
+                    </a>
+
+                    <a href={props.git} target="_blank" >
+                        <button  className="p-2 sm:mt-0 mt-3 py-1 rounded-xl border  ml-10  cursor-pointer text-violet-500 hover:text-violet-700 hover:bg-gray-200 duration-200 ease-in shadow-sm shadow-violet-700 hover:shadow-violet-500">
+                            <div className="flex gap-2 items-center">
+                                <div><img  className="h-6 filter invert-0 sepia brightness-200 hue-rotate-150" src="./code.png" alt="" /></div>
+                                <div className="text-[20px]">Github</div>
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
         )
@@ -51,6 +67,8 @@ export default function Project(){
                 tech1="React"
                 tech2="TypeScript"
                 tech3="Tailwind CSS"
+                live="https://slangster.vercel.app/"
+                git="https://github.com/lkshayb/slangster"
                 
                 />
                 <ProdCard 
@@ -61,6 +79,8 @@ export default function Project(){
                 tech1="React"
                 tech2="MapLibre GL JS"
                 tech3="API Integration"
+                live="https://ip-finder-mu.vercel.app/"
+                git="https://github.com/lkshayb/IP-Scout"
         
                 />
                 <ProdCard 
@@ -72,6 +92,7 @@ export default function Project(){
                 tech2="Node.js"
                 tech3="Express.js"
                 tech4="WebSockets"
+                git="https://github.com/lkshayb/ChatApp"
                 />
             </div>
             
