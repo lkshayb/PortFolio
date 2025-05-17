@@ -92,6 +92,7 @@ export default function Project(){
                 tech2="Node.js"
                 tech3="Express.js"
                 tech4="WebSockets"
+                live="https://talkspace-ivory.vercel.app/"
                 git="https://github.com/lkshayb/ChatApp"
                 />
             </div>
