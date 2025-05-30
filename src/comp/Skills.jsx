@@ -1,6 +1,6 @@
 export default function Skills(){
     return(
-        <div className="h-auto flex-col mb-20">
+        <div className="h-auto flex-col mb-50">
             <div className="text-white mb-20">.</div>
 
             <div className="flex items-center justify-center ">
