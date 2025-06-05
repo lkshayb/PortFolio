@@ -1,10 +1,19 @@
+import { useRef } from "react"
 import { div } from "three/tsl"
 
 export default function Project(){
+    const vidref = useRef();
     function ProdCard(props){
+        
+
         return(
             <div className="bg-white pb-10 rounded-xl lg:mb-0 mb-10 w-75 sm:w-100 mx-1 shadow-md hover:shadow-xl duration-200 ease-in">
-                <img src={props.image} className="rounded-t-xl hover:scale-102  duration-200 ease-in hover:rounded-xl" alt="" />
+                <video className="lg:flex hidden rounded-t-2xl hover:scale-105 duration-300 ease-in hover:rounded-2xl" loop width={"auto"} height={"auto"} autoPlay>
+                    <source src={props.vid}  type="video/mp4"/>
+                </video>
+
+                <img className="lg:hidden flex rounded-t-2xl" src={props.image} alt="" />
+                
                 <div className="font-[600] text-xl pl-8 pt-4">
                     <span className="">{props.ProjectName}</span>
                 </div>
@@ -61,7 +70,8 @@ export default function Project(){
                 
                 <ProdCard 
                 ProjectName="SlangSter" 
-                image="./slangster.png" 
+                image="./slangster.png"
+                vid="./slangster.mp4" 
                 Desc_1="AI-Powered Chatbot with Hindi Slang" 
                 Desc_2="Built a fun chatbot using React, TypeScript, and Google Gemini AI, designed to chat in English with a splash of hindi slang. Features real-time messaging and a modern bubble styled interface with Tailwind CSS."
                 tech1="React"
@@ -73,7 +83,8 @@ export default function Project(){
                 />
                 <ProdCard 
                 ProjectName="IPScout" 
-                image="./ipscout.png" 
+                image="ipscout.png"
+                vid="./ipscout.mp4" 
                 Desc_1="Interactive IP Geolocation Tracker" 
                 Desc_2="Developed a React-based web app to retrieve and visualize the geographic location of any IP address using real-time data. Features automatic detection of users' public IP address and an interactive MapLibre GL JS map showing IP-based locations."
                 tech1="React"
@@ -85,7 +96,8 @@ export default function Project(){
                 />
                 <ProdCard 
                 ProjectName="TalkSpace" 
-                image="./talkspace.png" 
+                image="./talkspace.png"
+                vid="./talkspace.mp4" 
                 Desc_1="Real-Time Room-Based Chat Application" 
                 Desc_2="Built a real-time chat platform where users can join or create chat rooms using WebSockets for seamless communication. Features a dual stack architecture with Node.js + Express.js on the backend and React.js on the frontend."
                 tech1="React"
